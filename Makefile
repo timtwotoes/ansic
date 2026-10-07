@@ -4,13 +4,16 @@ BUILD_DIR = build
 
 # If no target is specified, the first target is executed
 # Compile all examples
-all: ansic-001 ansic-002
+all: ansic-001 ansic-002 ansic-003
 
 ansic-001: make-destination
 	cc $(CFLAGS) ansic-001.c -o $(BUILD_DIR)/ansic-001
 
 ansic-002: make-destination
 	cc $(CFLAGS) ansic-002.c -o $(BUILD_DIR)/ansic-002
+
+ansic-003: make-destination
+	cc $(CFLAGS) ansic-003.c -o $(BUILD_DIR)/ansic-003
 
 make-destination:
 	mkdir -p $(BUILD_DIR)
@@ -20,6 +23,7 @@ make-destination:
 descriptions:
 	$(info ansic-001: Hello World)
 	$(info ansic-002: Fahrenheit-Celsius table)
+	$(info ansic-003: Fahrenheit-Celsius table using float)
 
 clean:
 	rm -rf $(BUILD_DIR)
