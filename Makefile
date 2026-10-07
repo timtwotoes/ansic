@@ -4,7 +4,8 @@ BUILD_DIR = build
 
 # If no target is specified, the first target is executed
 # Compile all examples
-all: ansic-001 ansic-002 ansic-003 ansic-004 ansic-005 ansic-006 ansic-007
+all: ansic-001 ansic-002 ansic-003 ansic-004 ansic-005 ansic-006 ansic-007 \
+	ansic-008
 
 ansic-001: make-destination
 	cc $(CFLAGS) ansic-001.c -o $(BUILD_DIR)/ansic-001
@@ -27,6 +28,9 @@ ansic-006: make-destination
 ansic-007: make-destination
 	cc $(CFLAGS) ansic-007.c -o $(BUILD_DIR)/ansic-007
 
+ansic-008: make-destination
+	cc $(CFLAGS) ansic-008.c -o $(BUILD_DIR)/ansic-008
+
 make-destination:
 	mkdir -p $(BUILD_DIR)
 
@@ -40,6 +44,7 @@ descriptions:
 	$(info ansic-005: Fahrenheit-Celsius table using symbolic constants)
 	$(info ansic-006: getchar and putchar)
 	$(info ansic-007: Word counting)
+	$(info ansic-008: Arrays)
 
 clean:
 	rm -rf $(BUILD_DIR)
