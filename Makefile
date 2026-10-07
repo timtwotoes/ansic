@@ -1,5 +1,5 @@
 # Set general compiler flags
-CFLAGS = -std=c89 -Wall -Wno-implicit-int
+CFLAGS = -std=c89 -Wall
 BUILD_DIR = build
 
 # If no target is specified, the first target is executed
