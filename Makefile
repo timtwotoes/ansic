@@ -48,7 +48,7 @@ descriptions:
 	$(info ansic-006: getchar and putchar)
 	$(info ansic-007: Word counting)
 	$(info ansic-008: Arrays)
-	$(info ansic-008: Functions)
+	$(info ansic-009: Functions)
 
 clean:
 	rm -rf $(BUILD_DIR)
