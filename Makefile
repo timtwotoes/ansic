@@ -5,7 +5,7 @@ BUILD_DIR = build
 # If no target is specified, the first target is executed
 # Compile all examples
 all: ansic-001 ansic-002 ansic-003 ansic-004 ansic-005 ansic-006 ansic-007 \
-	ansic-008 ansic-009 ansic-010 ansic-011
+	ansic-008 ansic-009 ansic-010 ansic-011 ansic-012
 
 ansic-001: make-destination
 	cc $(CFLAGS) ansic-001.c -o $(BUILD_DIR)/ansic-001
@@ -40,6 +40,9 @@ ansic-010: make-destination
 ansic-011: make-destination
 	cc $(CFLAGS) ansic-011.c -o $(BUILD_DIR)/ansic-011
 
+ansic-012: make-destination
+	cc $(CFLAGS) ansic-012.c -o $(BUILD_DIR)/ansic-012
+
 make-destination:
 	mkdir -p $(BUILD_DIR)
 
@@ -57,6 +60,7 @@ descriptions:
 	$(info ansic-009: Functions)
 	$(info ansic-010: Character arrays)
 	$(info ansic-011: Character arrays using external)
+	$(info ansic-012: Print datatype ranges from standard headers)
 
 clean:
 	rm -rf $(BUILD_DIR)
